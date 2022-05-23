@@ -9,7 +9,8 @@
      $verification = isUserVerified($pdo, $_SESSION["user_email"]);
      $status["verified"] = true;
 
-     header("Location:index.php");
+     header("Location: /index.php");
+     exit();
      return;
      if ($verification["verified"] == 1) {
          $status["verified"] = true;
