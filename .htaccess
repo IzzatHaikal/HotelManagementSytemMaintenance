@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteBase /
 
-RewriteCond %{HTTP} on
+RewriteCond %{HTTPS} on
 RewriteCond %{REQUEST_URI} !\.(css|js)$ [NC]
 
 RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
