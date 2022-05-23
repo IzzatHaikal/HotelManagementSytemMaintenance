@@ -2,7 +2,6 @@ SetEnv env_db_name "heroku_005a985cabfb7a3"
 SetEnv env_user_name "b8005b16c70c6a"
 SetEnv env_password "93b3cea1"
 SetEnv env_db_host "us-cdbr-east-05.cleardb.net"
-SetEnv CLEARDB_DATABASE_URL "mysql://b8005b16c70c6a:93b3cea1@us-cdbr-east-05.cleardb.net/heroku_005a985cabfb7a3?reconnect=true"
 
 # We have used infinityfree.net as our remote host to store ftp files. You may disable this feature by commenting the code
 SetEnv env_ftp_server  ""
