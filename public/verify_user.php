@@ -10,12 +10,14 @@
      $status["verified"] = true;
 
      header("Location: index.php");
-     return;
+     exit();
+    //  return;
      if ($verification["verified"] == 1) {
          $status["verified"] = true;
 
          header("Location: index.php");
-         return;
+         exit();
+        //  return;
      }
  }
 
@@ -46,7 +48,8 @@
           $status["verified"] = true;
 
           header("Location: index.php");
-          return;
+          exit();
+          // return;
       }
 
       $status["verified"] = false;
