@@ -10,14 +10,12 @@
      $status["verified"] = true;
 
      header("Location: index.php");
-     exit();
-    //  return;
+     return;
      if ($verification["verified"] == 1) {
          $status["verified"] = true;
 
          header("Location: index.php");
-         exit();
-        //  return;
+         return;
      }
  }
 
@@ -48,8 +46,7 @@
           $status["verified"] = true;
 
           header("Location: index.php");
-          exit();
-          // return;
+          return;
       }
 
       $status["verified"] = false;
@@ -57,3 +54,35 @@
 ?>
 
 
+<?php
+include("./includes/header.php");
+?>
+<body>
+  <header id="verify-user">
+    <div id="verify-user--bg-image">
+      <?php include("./includes/navbar.php"); ?>
+      <div class="wrapper">
+      <div class="container">
+            <div class="content p-5">
+                <h2><b>Verify your account</b></h2>
+                <p>A verification link has been sent to your registered email id</p>
+                <?php if ($status["verified"]) { ?> 
+                  <h3 class="text-success ">Your account has been verified redirecting...</h3>
+                <?php } elseif ($status["verified"] == null) { ?> 
+                <p></p>
+                <?php } else {?> 
+                  <h3 class="text-danger">Invalid link...</h3>
+                <?php } ?>
+                <form action="./core/resend_mail.php" method="GET">
+                  <button class="btn btn-outline-primary" type="submit" name="resend" value="resend">Resend email</button>
+                </form>
+            </div>
+      </div>
+      </div>
+    </div>
+  </header>
+  <main>
+  </main>
+  <?php include("./includes/footer.php"); ?>
+</body>
+</html>
