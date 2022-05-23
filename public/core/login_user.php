@@ -1,6 +1,7 @@
 <?php
 require("../config.php");
 header("Content-Type: application/json; charset=utf-8");
+header('Access-Control-Allow-Origin: *');
 
 
 $user_email=$_POST['user_email'];
