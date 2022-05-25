@@ -59,6 +59,7 @@ include("./includes/header.php");
 ?>
 <body>
   <header id="verify-user">
+    <?php echo($_SESSION['user_email']) ?>
     <div id="verify-user--bg-image">
       <?php include("./includes/navbar.php"); ?>
       <div class="wrapper">
