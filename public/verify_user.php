@@ -59,13 +59,14 @@ include("./includes/header.php");
 ?>
 <body>
   <header id="verify-user">
-    <?php echo($_SESSION['user_email']) ?>
     <div id="verify-user--bg-image">
       <?php include("./includes/navbar.php"); ?>
       <div class="wrapper">
       <div class="container">
             <div class="content p-5">
                 <h2><b>Verify your account</b></h2>
+                <?php echo $_SESSION['user_email'] ?>
+                <?php echo 'string' ?>
                 <p>A verification link has been sent to your registered email id</p>
                 <?php if ($status["verified"]) { ?> 
                   <h3 class="text-success ">Your account has been verified redirecting...</h3>
