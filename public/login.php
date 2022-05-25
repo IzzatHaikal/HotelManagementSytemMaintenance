@@ -117,7 +117,7 @@ if (isLoggedIn()) {
             handleError(data.about, data.message);
             $("#login-user-btn").html("Log in");
           } else {
-            window.location.href="verify_user.php";
+            window.location.href="index.php";
             return;
           }
         },
