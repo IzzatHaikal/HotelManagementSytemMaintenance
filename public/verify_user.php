@@ -2,7 +2,7 @@
   require_once("./config.php");
 
   $status = array(
-    "verified" => true
+    "verified" => null
   );
 
  if (isset($_SESSION["user_email"])) {
