@@ -59,7 +59,7 @@ if (isset($_GET["check_in_date"])) {
                                 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                                 $sql2 = "SELECT * FROM rooms WHERE room_id = :room_id";
-                                $stmt2 = $pdo->prepare($sql);
+                                $stmt2 = $pdo->prepare($sql2);
                                 $stmt2->execute(array(
                                     ":room_id" => $_GET["room_id"],
                                 ));

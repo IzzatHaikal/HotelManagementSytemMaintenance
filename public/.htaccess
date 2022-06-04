@@ -1,9 +1,7 @@
-SetEnv env_db_name "hotel"
-SetEnv env_user_name "root"
-SetEnv env_password ""
-SetEnv env_db_host "localhost"
+RewriteEngine On
+RewriteBase /HotelManagementSytemMaintenance
 
-# We have used infinityfree.net as our remote host to store ftp files. You may disable this feature by commenting the code
-SetEnv env_ftp_server  ""
-SetEnv env_ftp_user ""
-SetEnv env_ftp_pass ""
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ %1 [L,NE,R=302]
+
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
