@@ -136,7 +136,7 @@ include("./includes/header.php");
             </div>
          </div>
          <div class="row">
-            <a class="btn btn-danger" href="reservation.php">Book now</a>
+            <a class="btn btn-danger" href="reservationDirect.php?room_id=<?= $row["room_id"] ?>">Book now</a>
          </div>
       </div>
       <div class="col col-4 col-md-4">
