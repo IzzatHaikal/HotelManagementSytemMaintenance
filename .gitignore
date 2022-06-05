@@ -5,3 +5,4 @@ public/admin/test.php
 public/admin/file.php
 vendor/
 Procfile
+htaccess
