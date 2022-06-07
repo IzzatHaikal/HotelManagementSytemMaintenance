@@ -106,7 +106,6 @@ include("./includes/header.php");
                   <div class="price">$120/day</div>
                 </div>
                 <div class="footer-body">Daimond Suite</div>
-                <!-- <div class="footer-foot">lemon</div> -->
               </div>
             </div>
           </div>
@@ -121,7 +120,6 @@ include("./includes/header.php");
                   <div class="price">$120/day</div>
                 </div>
                 <div class="footer-body">Daimond Suite</div>
-                <!-- <div class="footer-foot">lemon</div> -->
               </div>
             </div>
           </div>
@@ -136,7 +134,6 @@ include("./includes/header.php");
                   <div class="price">$120/day</div>
                 </div>
                 <div class="footer-body">Daimond Suite</div>
-                <!-- <div class="footer-foot">lemon</div> -->
               </div>
             </div>
           </div>
@@ -151,22 +148,9 @@ include("./includes/header.php");
                   <div class="price">$120/day</div>
                 </div>
                 <div class="footer-body">Daimond Suite</div>
-                <!-- <div class="footer-foot">lemon</div> -->
               </div>
             </div>
           </div>
-          <!-- <div class="col col-md-4">
-            <div class="img-wrapper">
-              <img src="" alt="Room photo" />
-            </div>
-            <div class="content">
-              <div class="title">Deluxe Suite</div>
-              <div class="price">$&nbsp;<span class="value">480</span></div>
-              <div class="book-room">
-                <a href="#">Book this room</a>
-              </div>
-            </div>
-            </div> -->
         </div>
       </div>
     </section>
