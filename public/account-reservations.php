@@ -79,7 +79,23 @@ include("./includes/header.php");
 
     function delete1(id,room_id){
       console.log(room_id);
-      $.ajax({
+      const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            actions: "my-actions",
+            confirmButton: 'btn btn-danger',
+        },
+        buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        confirmButtonText: 'Yes, delete it!',
+        showCloseButton: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+          $.ajax({
             url: "core/reservation_delete.php",
             type: "POST",
             data: {'id':id,
@@ -89,21 +105,50 @@ include("./includes/header.php");
             console.log("HERE");
             console.log(data); 
             if (data.error == 1) {
-              alert('Successfully deleted');
-              location.reload();
+              swalWithBootstrapButtons.fire(
+                            'Deleted!',
+                            '',
+                            'success',
+                        ).then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload()
+                            } else {
+                                location.reload()
+                            }
+                        })
             } else {
-               //window.location.href="account-reservations.php";
-               alert('Successfully deleted');
-               location.reload();
-               return;
+              swalWithBootstrapButtons.fire(
+                            'Deleted!',
+                            '',
+                            'success',
+                        ).then((result) => {
+                            if (result.isConfirmed) {
+                                location.reload()
+                            } else {
+                                location.reload()
+                            }
+                        })
             }
             },
             error: function (data, message, errorThrown) {
-            console.log(errorThrown);
+              Swal.fire(
+                        'Fail!',
+                        'Error occured in deleting. Please try again after a few minute',
+                        'error',
+                    ).then((result) => {
+                        if (result.isConfirmed) {
+                            location.reload()
+                        } else {
+                            location.reload()
+                        }
+                    })
             // $("#error-form").html("<span class=\"p-2\">" + message + errorThrown + "</span>");
             },
            
         });
+        }
+    })
+      
     }
   </script>
 </body>

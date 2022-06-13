@@ -12,6 +12,7 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
       />
+      <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Jquery UI theme -->
     <link
       rel="stylesheet"
