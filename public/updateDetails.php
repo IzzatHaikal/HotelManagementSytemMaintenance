@@ -12,9 +12,6 @@ include("./includes/header.php");
       <div class="container">
       <div class="col">
           <div class="Account-page">
-            <?php
-            echo $_SESSION["user_id"];
-            ?>
             <form id="updateDetails" method="post" class="form">
               <?php
                   $sql = "SELECT * FROM users WHERE user_id = :user_id";
@@ -31,7 +28,7 @@ include("./includes/header.php");
                     class="form-control"
                     name="user_fname"
                     id="user_fname"
-                    placeholder="First name"
+                    placeholder="<?= $row["user_fname"] ?>"
                     
                     
                   />
@@ -43,7 +40,7 @@ include("./includes/header.php");
                     class="form-control"
                     name="user_lname"
                     id="user_lname"
-                    placeholder="Last name"
+                    placeholder="<?= $row["user_lname"] ?>"
                     
                     
                   />
@@ -67,7 +64,7 @@ include("./includes/header.php");
                     class="form-control"
                     name="user_phone"
                     id="user_phone"
-                    placeholder="First name"
+                    placeholder="<?= $row["user_phone"] ?>"
                     
                     
                   />
@@ -85,7 +82,7 @@ include("./includes/header.php");
                   />
                 </div>
                 
-                <button type="submit" class="btn btn-success">Update pr</button>
+                <button type="submit" class="btn btn-success">Confirm details</button>
                 
             </form>
             <!-- <button type="submit" class="btn btn-danger">Confirm Details</button> -->
