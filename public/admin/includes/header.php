@@ -101,6 +101,8 @@
         </li> -->
         <li class="nav-item">
             <a class="nav-link" href="./users.php">Users</a>
+        </li><li class="nav-item">
+            <a class="nav-link" href="./survey.php">Feedback</a>
         </li>
         </ul>
     </div>

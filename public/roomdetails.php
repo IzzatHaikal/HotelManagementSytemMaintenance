@@ -9,6 +9,13 @@ include("./includes/header.php");
 ?>
   <body>
     <style>
+
+       * {
+         padding: 0;
+         margin: 0;
+         font-family: "Lato", sans-serif; 
+      }
+
       .col-4 {
         background-color: whitesmoke;
         border-radius: 10px;
@@ -34,13 +41,14 @@ include("./includes/header.php");
       }
 
       h3{
-        /* font-family: 'Amaranth';font-size: 30px; */
+         font-family: "Lato", sans-serif;
         font-weight:bold;
       }
 
       h4{
-        /* font-family: 'Amaranth';font-size: 18px;  */
-        margin-left: 14px;
+         font-family: "Lato", sans-serif; 
+        margin-left: 10px;
+        font-weight: bold;
       }
 
       h2{
@@ -60,11 +68,11 @@ include("./includes/header.php");
       }
 
       p{
-        font-family: 'Amaranth';
+         font-family: "Lato", sans-serif; 
       }
 
       .review{
-        padding: 0px 10px 0px 10px;
+         padding: 10px 10px 10px 10px;
         margin:15px 10px 0px 10px;
         border-radius: 10px;
       }
@@ -106,7 +114,7 @@ include("./includes/header.php");
             <div class="col">
                <h3><?= $row["room_name"] ?></h3>
             </div>
-            <div class="col" style="margin-top: 13px; margin-left:45px; font-family: 'Amaranth';font-weight:bold; font-size:20px">Starts from:something here...</div>
+            <div class="col" style="margin-top: 13px; margin-left:45px; font-family: Lato, sans-serif; ;font-weight:bold; font-size:20px"></div>
          </div>
          <div class="row">
             <div class="col" style="color:#FA4A5C;">
@@ -127,7 +135,7 @@ include("./includes/header.php");
          </div>
          <div class="row">
             <div class="col">
-               <p style=color:lightgrey>
+               <p style=color:grey>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
                   illum veniam qui veritatis praesentium voluptates atque enim
                   quia exercitationem ipsa quaerat, delectus officia dolore rem
@@ -136,15 +144,15 @@ include("./includes/header.php");
             </div>
          </div>
          <div class="row">
-            <a class="btn btn-danger" href="reservation.php">Book now</a>
+            <a class="btn btn-danger" href="reservationDirect.php?room_id=<?= $row["room_id"] ?>">Book now</a>
          </div>
       </div>
       <div class="col col-4 col-md-4">
          <h3>Reviews</h3>
          <div class="row">
             <div class="review bg-white">
-               <p>Users</p>
-               <P style=color:lightgrey>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
+               <h4 style="padding: 10px;">Users</h4>
+               <P style=color:grey>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
                   illum veniam qui veritatis praesentium voluptates atque enim
                   quia exercitationem ipsa quaerat, delectus officia dolore rem
                   consequatur nesciunt. Ullam, consequuntur necessitatibus 
@@ -153,8 +161,8 @@ include("./includes/header.php");
          </div>
          <div class="row">
             <div class="review bg-white">
-               <p>Users</p>
-               <P style=color:lightgrey>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
+               <h4 style="padding: 10px;">Users</h4>
+               <P style=color:grey>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos
                   illum veniam qui veritatis praesentium voluptates atque enim
                   quia exercitationem ipsa quaerat, delectus officia dolore rem
                   consequatur nesciunt. Ullam, consequuntur necessitatibus 

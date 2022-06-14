@@ -117,7 +117,8 @@ include("./includes/header.php");
                   <button class="btn btn-success">Update pr</button>
                 </div> -->
             </form>
-            
+            <a class='btn btn-primary' href="./updateDetails.php">Update Details</a>
+            <hr>
             <b>Delete account</b><br />
             By deleting your account you will lose all your data&nbsp;<small><a class="md text-danger" href="#">delete account</a></small>
           </div>
